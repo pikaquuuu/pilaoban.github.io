@@ -6,7 +6,7 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>Archives: 2018 | 痞老板的垃圾制造厂</title>
+  <title>CentOS7 下利用LNMP环境搭建wordpress博客 | 痞老板的垃圾制造厂</title>
   <meta name="author" content="plankton">
   
   <meta name="description" content="心不老则青春永驻">
@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="CentOS7 下利用LNMP环境搭建wordpress博客"/>
   <meta property="og:site_name" content="痞老板的垃圾制造厂"/>
 
   
@@ -90,156 +90,129 @@
   	<div class="content">
     	 
 
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title"><i class="fa fa-archive"></i> 2018</h1>
-</div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
 	
-
-	  <div id="top_search"></div>
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2018">2018<b class="caret"></b></h4>
-			<ul id="2018" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2018-05-22 </span> &raquo;
-		
-		   <span class="title"><a href="/2018/05/22/hexo-gayhub搭建静态博客/" >hexo+gayhub搭建静态博客</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2018-05-22 </span> &raquo;
-		
-		   <span class="title"><a href="/2018/05/22/wordpress-的一些操蛋的设定/" >wordpress 的一些操蛋的设定</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2018-05-22 </span> &raquo;
-		
-		   <span class="title"><a href="/2018/05/22/CentOS7-下利用LNMP环境搭建wordpress博客/" >CentOS7 下利用LNMP环境搭建wordpress博客</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2018-05-22 </span> &raquo;
-		
-		   <span class="title"><a href="/2018/05/22/CentOS7下安装py3/" >CentOS7下安装py3</a></span>
-		
-		</li>			
-		
-		</ul>
+		<div class="page-header">
+			<h1> CentOS7 下利用LNMP环境搭建wordpress博客</h1>
 		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
 	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
 
 
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/linux/">linux<span>2</span></a></li>
-		
-			<li><a href="/categories/杂学/">杂学<span>2</span></a></li>
-		
-		</ul>
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>安装时只要LNMP的组件和phpMyAdmin</p>
+<p>如果有域名 请添加虚拟主机 详情移步<a href="https://oneinstack.com/install/" target="_blank" rel="noopener">https://oneinstack.com/install/</a>   (注意伪静态为wordpress)</p>
+<p>将wordpress解压至网站根目录（如有域名 就是你域名的根目录）</p>
+<p>先建立wordpress数据库 和一个单独的用户 把wordpress数据库权限给此用户（非要root也行 博客嘛 随意一点）</p>
+<p>进入wordpress文件夹</p>
+<p>将wp-config-sample.php 改名为wp-config.php</p>
+<p>进入wp-config.php</p>
+<p>修改数据库名 用户名 密码 等信息  注意主机地址改为127.0.0.1</p>
+<p>网页上输入 ip/wordpress   或 域名/wordpress</p>
+<p>进行注册和安装 如果没有域名 到此就结束了</p>
+<p>有域名 在站点设置里将站点地址改为域名  url地址不要改！！！</p>
+<p>将wordpress里index.php复制一份到域名根目录下（就是跟wordpress文件夹同级）</p>
+<p>修改index.php</p>
+<p>注释#require( dirname( <strong>FILE</strong> ) . ‘/wp-blog-header.php’ );</p>
+<p>添加require(‘./wordpress/wp-blog-header.php’);</p>
+<p>保存</p>
+<p>你的网站就完全OJ8K了</p>
+	  
 	</div>
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/object-Object/">[object Object]<span>3</span></a></li>
-		
-			<li><a href="/tags/centos/">centos<span>1</span></a></li>
-		
-		 
-		</ul>
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2018/05/22/wordpress-的一些操蛋的设定/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2018/05/22/CentOS7下安装py3/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
 	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
 
 
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2018/05/22/hexo-gayhub搭建静态博客/" ><i class="fa fa-file-o"></i>hexo+gayhub搭建静态博客</a>
-      </li>
-    
-      <li>
-        <a href="/2018/05/22/wordpress-的一些操蛋的设定/" ><i class="fa fa-file-o"></i>wordpress 的一些操蛋的设定</a>
-      </li>
-    
-      <li>
-        <a href="/2018/05/22/CentOS7-下利用LNMP环境搭建wordpress博客/" ><i class="fa fa-file-o"></i>CentOS7 下利用LNMP环境搭建wordpres...</a>
-      </li>
-    
-      <li>
-        <a href="/2018/05/22/CentOS7下安装py3/" ><i class="fa fa-file-o"></i>CentOS7下安装py3</a>
-      </li>
-    
-  </ul>
-</div>
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
 
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-05-22 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/linux/">linux<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/object-Object/">[object Object]<span>3</span></a></li>
+    </ul>
+	</div>
 		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/pikaquuuu" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-	</ul>
-</div>
 
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
 
+	</div>
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
 
+</div><!-- row -->
 
 
 
